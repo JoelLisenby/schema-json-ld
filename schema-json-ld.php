@@ -20,13 +20,11 @@ class Schema {
 	}
 	
 	public function wp_footer() {
-		
-		if(is_single()) {
-			
+
+		if(is_single()) {	
 			echo '<script type="application/ld+json">'. $this->get_schema_json_article() .'</script>';
-			
-        }
-		
+		}
+
 	}
 	
 	public function get_schema_json_article() {
